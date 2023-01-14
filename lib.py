@@ -1,21 +1,21 @@
 N = int(input("Введите количество списков\n"))
-CTPOKU = []
-CUMBOJIbI = []
-nOBTOPPEHU9 = []
+Lines = []
+Symbols = []
+Repeats = []
 for i in range(N):
-    CTPOKU.append(input("Введите строку  " + str(i + 1) + "\n"))
-for i in range(len(CTPOKU)):
-    CTPOKA = CTPOKU[i]
+    Lines.append(input("Введите строку  " + str(i + 1) + "\n"))
+for i in range(len(Lines)):
+    CTPOKA = Lines[i]
     for j in range(len(CTPOKA)):
         ECTb = False
-        for k in range(len(CUMBOJIbI)):
-            if(CTPOKA[j] == CUMBOJIbI[k]):
-                nOBTOPPEHU9[k] = True
+        for k in range(len(Symbols)):
+            if(CTPOKA[j] == Symbols[k]):
+                Repeats[k] = True
                 ECTb = True
         if(not(ECTb)):
-            CUMBOJIbI.append(CTPOKA[j])
-            nOBTOPPEHU9.append(False)
+            Symbols.append(CTPOKA[j])
+            Repeats.append(False)
 K = 0
-for i in range(len(nOBTOPPEHU9)):
-    if(nOBTOPPEHU9[i]): K+=1
+for i in range(len(Repeats)):
+    if(Repeats[i]): K+=1
 print("Количество повторяющихся символов: " + str(K))
